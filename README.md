@@ -2,7 +2,7 @@
 
 ## Description
 
-Imaris compiler for Vickie's paper
+To streamline the image analysis of cleared lymph nodes, we provide an R workflow that rapidly consolidates all Imaris statistics from a single segmented surface (eg Germinal centers, Follicular T cells, Plasma cells) from the same image. We also provide the code to combine the statistics from the same surface across different images into a unified data frame, including a unique identifier column for each image.
 
 ## Dependencies  
 
