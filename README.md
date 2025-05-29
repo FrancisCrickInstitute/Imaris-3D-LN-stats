@@ -14,7 +14,7 @@ Installation of the required R packages are automated within the script, includi
   
 ### Inputs  
 
-Please see an example of [input.csv](input.csv) below. The configuration will be loaded as a dataframe with 2 columns, where the first column contains the `Sample_ID` and the second corresponds to the `Directory` (folder) path IMARIS statistics in `.csv` format.  
+Please see an example of [input.csv](input.csv) below. The configuration will be loaded as a dataframe with 2 columns, where the first column contains the `Sample_ID` and the second corresponds to the `Directory` (folder) path for all IMARIS statistics in `.csv` format.  
   
 Example `input.csv` :
 | Sample_ID    | Directory |
