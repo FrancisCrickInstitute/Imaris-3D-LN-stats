@@ -25,25 +25,31 @@ Example `input.csv` :
 
 ### Running the compiler
 
-Clone and `cd` to the cloned repository :
+Clone this repository and `cd` into it :
 ```
 git clone https://github.com/FrancisCrickInstitute/Imaris-3D-LN-stats
 cd ./Imaris-3D-LN-stats
 ```
 
-Run the following command :
+To compile the csv files, specify the following arguments and execute our compiler script:
 
 ```
-/path/to/Rscript compiler.R <input_csv_path> <output_csv_path> <column_to_merge1> <column_to_merge2> ...
-```
-where you can specify specific input, output csv files, and classification columns to merge between the csv files within a sample.
-
-Running command using example data: 
-
-```
-Rscript compiler.R input.csv 3D_LN_stats_v0.0.0.csv "Classification" 
+/path/to/Rscript compiler.R <input_csv_path> <output_csv_path> <column_to_merge1 (optional)> <column_to_merge2 (optional)> ...
 ```
 
+`<input_csv_path>` = Required; full or relative path of the input csv file  
+`<output_csv_path>` = Required; full or relative path of the output csv file  
+`<column_to_merge>` = Optional; additional columns in IMARIS csv outputs to merge
+
+### Example
+Here we will run the compiler using our example data, merging on the `Classification` column across all csv files [(example)](test/Lymph_node_1/GCs_Statistics/GCs_Intensity_Mean_Ch=1_Img=1.csv) for each sample.
+
+```
+git clone https://github.com/FrancisCrickInstitute/Imaris-3D-LN-stats
+cd ./Imaris-3D-LN-stats
+
+Rscript ./compiler.R ./input.csv ./3D_LN_stats_v0.0.0.csv "Classification" 
+```
 
 ## Citation
 
