@@ -39,7 +39,7 @@ To compile the csv files, specify the following arguments and execute our compil
 
 `<input_csv_path>` = Required; full or relative path of the input csv file  
 `<output_csv_path>` = Required; full or relative path of the output csv file  
-`<column_to_merge>` = Optional; additional columns in IMARIS csv outputs to merge
+`<column_to_merge>` = Optional; additional columns in IMARIS csv outputs to merge. The columns must be present in all samples.
 
 ### Example
 Here we will run the compiler using our example data, merging on the `Classification` column across all csv files [(example)](test/Lymph_node_1/GCs_Statistics/GCs_Intensity_Mean_Ch=1_Img=1.csv) for each sample.
