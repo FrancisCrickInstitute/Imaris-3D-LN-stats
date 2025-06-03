@@ -66,7 +66,7 @@ for (pkgs in cran) {
 
 # FUNCTION - read_and_process_csv
 #==========================================================================================
-read_and_process_csv <- function(file_path) {
+read_and_process_csv <- function(file_path, merge_cols) {
 
   ## read the file, skipping the first two rows
   data <- read.csv(file_path, header = FALSE, stringsAsFactors = FALSE)
@@ -101,8 +101,14 @@ read_and_process_csv <- function(file_path) {
         col}
     })}
 
+  ## add empty columns for the merge_cols that are not present in the dataframes
+  for(k in seq_along(merge_cols)){
+    if(!merge_cols[k] %in% colnames(data)){
+      data[[merge_cols[k]]] <- ""}
+  }
+
   ## incorporate units into column names if Unit column is not empty
-  merge_cols <- na.omit(c("Unit", args[3:length(args)]))
+  merge_cols <- na.omit(c("Unit", merge_cols))
 
   if (all(merge_cols %in% colnames(data))) {
 
@@ -184,7 +190,7 @@ for(i in 1:nrow(config)){
         warning(paste0("The directory '", config[[2]][i], "' contains no CSV files. Skipping this directory."))}
 
     ## apply read_and_process csv function to all csv files in your directory
-    data_list <- lapply(csv_files, read_and_process_csv)
+    data_list <- lapply(csv_files, function(x) read_and_process_csv(x, merge_cols = args[3:length(args)]))
     
     ## filter out NULL entries from the list
     data_list <- Filter(Negate(is.null), data_list)
@@ -194,6 +200,8 @@ for(i in 1:nrow(config)){
 
     ## merge all data frames on the 'ID' column
     merge_cols <- na.omit(c("ID", args[3:length(args)]))
+    
+    # merge the dataframes
     combined_data <- suppressWarnings(Reduce(function(x, y) merge(x, y, by = merge_cols,  all = TRUE), data_list))
     combined_data$Sample_ID <- config[[1]][i]
     combined_data <- combined_data[,c(ncol(combined_data), 1:(ncol(combined_data)-1))]

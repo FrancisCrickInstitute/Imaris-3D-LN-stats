@@ -42,13 +42,13 @@ To compile the csv files, specify the following arguments and execute our compil
 `<column_to_merge>` = Optional; additional columns in IMARIS csv outputs to merge
 
 ### Example
-Here we will run the compiler using our example data, merging on the `Classification` column across all csv files [(example)](test/Lymph_node_1/GCs_Statistics/GCs_Intensity_Mean_Ch=1_Img=1.csv) for each sample.
+Here we will run the compiler using our example data, merging on the `Classification` column across all csv files [(example)](test/Lymph_node_1/GCs_Statistics/GCs_Intensity_Mean_Ch=1_Img=1.csv) for each sample. These columns do not have to be present for all sample, but must be present across the csv files in a single sample.
 
 ```
 git clone https://github.com/FrancisCrickInstitute/Imaris-3D-LN-stats
 cd ./Imaris-3D-LN-stats
 
-Rscript ./compiler.R ./input.csv ./3D_LN_stats_v0.0.0.csv "Classification" 
+Rscript ./compiler.R ./input.csv ./3D_LN_stats_v0.0.1.csv "Classification" "Classification2"
 ```
 
 ## Citation

@@ -1,20 +1,20 @@
 Intensity Mean Ch=1 Img=1,,,,,,,
  ==================== ,,,,,,,
-Intensity Mean,Unit,Category,Channel,Image,Time,Classification,ID
-2351.96,,Surface,1,Image 1,1,B,2
-2510.49,,Surface,1,Image 1,1,C,3
-2792.1,,Surface,1,Image 1,1,C,4
-2164.23,,Surface,1,Image 1,1,C,5
-2784.4,,Surface,1,Image 1,1,A,6
-2707.01,,Surface,1,Image 1,1,B,7
-2745.66,,Surface,1,Image 1,1,A,8
-2753.66,,Surface,1,Image 1,1,B,9
-2723.05,,Surface,1,Image 1,1,A,10
-2944.08,,Surface,1,Image 1,1,B,11
-3191.64,,Surface,1,Image 1,1,C,12
-2800.64,,Surface,1,Image 1,1,B,13
-2974.37,,Surface,1,Image 1,1,A,14
-2779.79,,Surface,1,Image 1,1,B,15
+Intensity Mean,Unit,Category,Channel,Image,Time,Classification,ID,Classification2
+2351.96,,Surface,1,Image 1,1,B,2,G
+2510.49,,Surface,1,Image 1,1,C,3,F
+2792.1,,Surface,1,Image 1,1,C,4,F
+2164.23,,Surface,1,Image 1,1,C,5,F
+2784.4,,Surface,1,Image 1,1,A,6,D
+2707.01,,Surface,1,Image 1,1,B,7,E
+2745.66,,Surface,1,Image 1,1,A,8,D
+2753.66,,Surface,1,Image 1,1,B,9,E
+2723.05,,Surface,1,Image 1,1,A,10,D
+2944.08,,Surface,1,Image 1,1,B,11,E
+3191.64,,Surface,1,Image 1,1,C,12,F
+2800.64,,Surface,1,Image 1,1,B,13,E
+2974.37,,Surface,1,Image 1,1,A,14,D
+2779.79,,Surface,1,Image 1,1,B,15,E
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
