@@ -52,8 +52,7 @@ cd ./Imaris-3D-LN-stats
 Rscript ./compiler.R ./input.csv ./3D_LN_stats_v0.0.0.csv "Classification" 
 ```
 
-## Citation
-
-
-
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+
+## Citation
